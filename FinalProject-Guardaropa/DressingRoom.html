@@ -1,0 +1,66 @@
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dressing Room</title>
+
+    <link rel="stylesheet" href="./libs/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="./libs/colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/threejslights.css" />
+
+    <script src="./libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script src="./libs/jquery-ui/jquery-ui.js"></script>
+    <script src="./libs/three.js/three.js"></script>
+    <script src="./libs/three.js/controls/OrbitControls.js"></script>
+    <script src="./libs/colorpicker/js/colorpicker.js"></script>
+    <script src="./libs/three.js/loaders/OBJLoader.js"></script>
+    <script src="./libs/three.js/loaders/MTLLoader.js"></script>
+    <script src="DressingRoom.js"></script>
+    <script src="sceneHandler.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(
+        function() {
+
+          var canvas = document.getElementById("webglcanvas");
+
+          // create the scene
+          createScene(canvas);
+
+          // Run the run loop
+          run();
+        }
+      );
+    </script>
+
+    <script>
+      function resize() {
+        $("#webglcanvas").outerHeight($(window).height() - $("#webglcanvas").offset().top - Math.abs($("#webglcanvas").outerHeight(true) - $("#webglcanvas").outerHeight()));
+        $("#webglcanvas").outerWidth($(window).width() - $("#webglcanvas").offset().top - Math.abs($("#webglcanvas").outerWidth(true) - $("#webglcanvas").outerWidth()));
+      }
+      $(document).ready(function() {
+        resize();
+        $(window).on("resize", function() {
+          resize();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="webglcanvas">
+      </canvas>
+      <header id="title" style="color: white;">
+        <h1>Dressing Room</h1>
+        <h2 id="selectorMsg">Jacket Selected</h2>
+      </header>
+      <div id="textureContainer">
+          <img onClick='changeSelectedMaterial("./images/5.png")' class="textureImage" src="./images/5.png" alt="texture4">
+          <img onClick='changeSelectedMaterial("./images/1.jpeg")' class="textureImage" src="./images/1.jpeg" alt="texture1">
+          <img onClick='changeSelectedMaterial("./images/2.jpg")' class="textureImage" src="./images/2.jpg" alt="texture2">
+          <img onClick='changeSelectedMaterial("./images/3.jpg")' class="textureImage" src="./images/3.jpg" alt="texture3">
+          <img onClick='changeSelectedMaterial("./images/4.jpg")' class="textureImage" src="./images/4.jpg" alt="texture4">
+      </div>
+    </div>
+</html>

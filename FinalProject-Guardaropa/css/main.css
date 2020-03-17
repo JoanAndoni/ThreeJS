@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial;
+    font-size:20px;
+    font-style: italic;
+}
+
+body {
+	color:rgb(10, 0, 0);
+}
+
+#container {
+	position:absolute;
+}
+
+#webglcanvas {
+	border:none;
+	background-color:#ffffff;
+}
+.textureImage{
+	border:3px solid black;
+	border-radius: 100px;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	transition: all .1s ease-in-out;
+}
+#selectedClotheContainer
+{
+	position:absolute;
+	right:20px;
+	bottom:40px;
+}
+#textureContainer
+{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+}
+.textureImage:hover{
+	border:3px solid white;
+	opacity: 0.8;
+	transform: scale(1.09);
+}
+#title {
+	position: absolute;
+	top: 0px !important;
+	left: 0px !important;
+	width: 100%;
+	background-color: #5f0f0fc7;
+	text-align: -webkit-center;
+	height: 100px;
+}
+#title h1{
+	font-size: 30px;
+}

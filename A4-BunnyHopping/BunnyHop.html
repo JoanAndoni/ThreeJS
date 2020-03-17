@@ -1,0 +1,47 @@
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bunny Hop</title>
+
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/threejsscene.css" />
+
+    <!-- LIBRARIES TO LOAD -->
+    <script src="libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script src="libs/jquery-ui/jquery-ui.js"></script>
+
+    <script src="libs/three.js/three.js"></script>
+    <script src="libs/three.js/controls/OrbitControls.js"></script>
+    <script src="libs/three.js/loaders/OBJLoader.js"></script>
+    <script src="libs/keyframe.js/keyframe.js"></script>
+
+    <!-- PERSONAL SCRIPTS TO LOAD -->
+    <script src="bunny.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(
+        function() {
+          var canvas = document.getElementById("webglcanvas");
+
+          // Create the scene
+          createScene(canvas);
+
+          // Animate
+          animations();
+
+          // Run the program
+          run();
+        }
+      );
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <canvas id="webglcanvas"></canvas>
+    </div>
+  </body>
+
+</html>
