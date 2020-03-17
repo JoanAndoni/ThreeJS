@@ -140,9 +140,9 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/localforage/-/localforage-0.0.30.tgz#3d60a6bf6dda38e3f8a469611598379f1f649509"
 
-"@types/three@0.84.15":
-  version "0.84.15"
-  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.84.15.tgz#4aa1965de2153fc7827e0c2cfb996e15c92a0a40"
+"@types/three@^0.84.15":
+  version "0.84.37"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.84.37.tgz#30ddd17a59a970ef21d252c08ae1cdd7b8b57cff"
   dependencies:
     "@types/webvr-api" "*"
 
@@ -3686,8 +3686,8 @@ string_decoder@~1.0.3:
     safe-buffer "~5.1.0"
 
 stringstream@~0.0.4:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.5.tgz#4e484cd4de5a0bbbee18e46307710a8a81621878"
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.6.tgz#7880225b0d4ad10e30927d167a1d6f2fd3b33a72"
 
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
@@ -3796,6 +3796,10 @@ tar@^2.0.0, tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+three-obj-mtl-loader@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/three-obj-mtl-loader/-/three-obj-mtl-loader-1.0.3.tgz#2901efd5b77cce29b61733c63f196432ee653667"
 
 three@0.86.0:
   version "0.86.0"
