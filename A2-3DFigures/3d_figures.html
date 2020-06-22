@@ -1,35 +1,35 @@
 <html>
 
-  <head>
-    <title>3d Figures</title>
-    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-    <script src="libs/jquery-3.3.1/jquery-3.3.1.js"></script>
-    <script src="libs/gl-matrix/gl-matrix.js"></script>
-    <script src="3d_figures.js"></script>
+<head>
+  <title>3d Figures</title>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <script src="../libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+  <script src="../libs/gl-matrix/gl-matrix.js"></script>
+  <script src="3d_figures.js"></script>
 
-    <script type="text/javascript">
-      $(document).ready(
-        function() {
-          var canvas = document.getElementById("webglcanvas");
-          var gl = initWebGL(canvas);
-          initViewport(gl, canvas);
-          initGL(canvas);
-          var piramid = createPiramid(gl, [-1.5, .5, -7], [0.1, 1.0, 0.2]);
-          var octahedron = createOctahedron(gl, [1.5, .5, -7], [0, 1.0, 0]);
-          var dodecahedron = createDodecahedron(gl, [-2, -1.8, -13], [-0.4, 1.0, 0.1], [0.0, 1.0, 0.0]);
-          // TO DO: create and draw the figures
-          initShader(gl);
-          run(gl, [piramid, octahedron, dodecahedron]);
-        }
-      );
-    </script>
+  <script type="text/javascript">
+    $(document).ready(
+      function () {
+        var canvas = document.getElementById("webglcanvas");
+        var gl = initWebGL(canvas);
+        initViewport(gl, canvas);
+        initGL(canvas);
+        var piramid = createPiramid(gl, [-1.5, .5, -7], [0.1, 1.0, 0.2]);
+        var octahedron = createOctahedron(gl, [1.5, .5, -7], [0, 1.0, 0]);
+        var dodecahedron = createDodecahedron(gl, [-2, -1.8, -13], [-0.4, 1.0, 0.1], [0.0, 1.0, 0.0]);
+        // TO DO: create and draw the figures
+        initShader(gl);
+        run(gl, [piramid, octahedron, dodecahedron]);
+      }
+    );
+  </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <canvas id="webglcanvas" style="border: none;" width="500" height="500"></canvas>
+  <canvas id="webglcanvas" style="border: none;" width="500" height="500"></canvas>
 
-  </body>
+</body>
 
 </html>
